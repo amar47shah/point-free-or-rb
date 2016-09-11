@@ -1,0 +1,17 @@
+$LOAD_PATH.unshift File.expand_path '../../lib', __FILE__
+
+require 'id'
+require 'constant'
+require 'apply'
+require 'flip'
+require 'compose'
+require 'head_and_tail'
+require 'fold'
+require 'map'
+require 'sum'
+require 'aggregate'
+require 'maximum'
+require 'length'
+require 'distance'
+require 'manhattan'
+require 'pythagorean'
