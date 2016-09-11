@@ -25,10 +25,10 @@ end
 
 def distance_point_ful_1
   lambda do |outer|
-    compose._(outer) * aggregate
+    blackbird._(outer)._(aggregate)
   end
 end
 
 def distance_point_free
-  gazinta._(aggregate) * compose
+  flip._(blackbird)._(aggregate)
 end
