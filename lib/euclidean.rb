@@ -1,6 +1,6 @@
 require_relative './distance'
 
-def pythagorean
+def euclidean
   distance._(square_root)._(square)
 end
 
