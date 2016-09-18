@@ -1,5 +1,3 @@
-require_relative './apply'
-
 # head and tail are needed to recurse over lists.
 # They fail on the input [].
 def head
@@ -17,7 +15,7 @@ def tail
 end
 
 def fail_on_empty! list
-  fail ArgumentError if empty?._(list)
+  fail ArgumentError if empty?.(list)
 end
 
 def empty?

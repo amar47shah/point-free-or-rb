@@ -1,4 +1,3 @@
-require_relative './apply'
 require_relative './head_and_tail'
 
 def fold
@@ -8,10 +7,10 @@ def fold
         if list == []
           initial
         else
-          list_head = head._(list)
-          list_tail = tail._(list)
-          transformed_head = transform._(initial)._(list_head)
-          fold._(transform)._(transformed_head)._(list_tail)
+          list_head = head.(list)
+          list_tail = tail.(list)
+          transformed_head = transform.(initial).(list_head)
+          fold.(transform).(transformed_head).(list_tail)
         end
       end
     end

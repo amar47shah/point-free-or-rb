@@ -1,10 +1,8 @@
-require_relative './apply'
-
 def flip
   lambda do |function|
     lambda do |first|
       lambda do |second|
-        function._(second)._(first)
+        function.(second).(first)
       end
     end
   end

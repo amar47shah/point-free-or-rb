@@ -1,9 +1,8 @@
-require_relative './apply'
 require_relative './fold'
 
 def sum
   lambda do |list|
-    fold._(add)._(0)._(list)
+    fold.(add).(0).(list)
   end
 end
 
