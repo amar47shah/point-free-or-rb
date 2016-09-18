@@ -1,26 +1,25 @@
-require_relative './apply'
 require_relative './flip'
 
 def compose
   lambda do |outer|
     lambda do |inner|
       lambda do |x|
-        outer._(inner._(x))
+        outer.(inner.(x))
       end
     end
   end
 end
 
 def gazinta
-  flip._(compose)
+  flip.(compose)
 end
 
 class Proc
   def * other
-    compose._(self)._(other)
+    compose.(self).(other)
   end
 
   def > other
-    gazinta._(self)._(other)
+    gazinta.(self).(other)
   end
 end

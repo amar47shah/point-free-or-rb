@@ -2,7 +2,7 @@ require_relative './distance'
 require_relative './id'
 
 def manhattan
-  distance._(id)._(abs)
+  distance.(id).(abs)
 end
 
 def abs
